@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignment 3</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(199, 182, 159);
+    font-family: sans-serif;
+    overflow-X: hidden;
+}
+hr{
+    position: relative;
+    margin: 10px;
+    z-index: 1;
+}
+
+h1{
+    position: relative;
+    font-size: 3em;
+    text-align: center;
+    margin: 20px auto;
+    color:white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@keyframes roller{
+    0%{transform: rotateX(0deg);}
+    10%{transform: rotateX(10deg);}
+    20%{transform: rotateX(20deg);}
+    30%{transform: rotateX(30deg);}
+    40%{transform: rotateX(40deg);}
+    80%{transform: rotateX(320deg);}
+    85%{transform: rotateX(330deg);}
+    90%{transform: rotateX(340deg);}
+    95%{opacity: 0.5;}
+    100%{transform: rotateX(360deg); opacity: 1;}
+}
+
+.gridbox{
+    position: relative;
+	display:grid;
+	grid-template-columns:repeat(auto-fill,minmax(220px, 5fr));
+	grid-gap:10px;
+	justify-content: center;
+    align-items:space-around;
+    z-index: 1;
+}
+
+.box{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+    background:rgba(32, 116, 194, 0.3);
+    border-top:1px solid rgba(202, 193, 193, 0.5);
+    border-left:1px solid rgba(167, 162, 162, 0.5);
+    border-radius: 15px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.box p{
+    display:block;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    background:rgba(223, 222, 222, 0.5);
+    color: white;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    font-size: 1.3em;
+}
+
+.box img{
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 900px) { 
+    .box p {
+        transform: translateY(0);
+        opacity: 1;
+    } 
+} 
+
+    </style>
+</head>
+<body>
+
+    <h1>Gallery heading</h1>
+
+    <div class="gridbox">
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+        <div class="box"><img src="placeholder-image.png" alt="IMAGE"><p>Image Title</p></div>
+    </div>
+</body>
+</html>
